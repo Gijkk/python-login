@@ -1,16 +1,16 @@
-name: Run Python Tests
+name: Run Python Tests        #tên workflows
 
-on:
-  push:
-  pull_request:
+on:                           #khi nào chạy
+  push:                       #chạy khi có push 
+  pull_request:               #chạy khi tạo pull request
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  test:                       #tên job
+    runs-on: ubuntu-latest    #môi trường chạy(máy ảo)
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3  #bước lấy mã nguồn
 
     - name: Setup Python
       uses: actions/setup-python@v4
